@@ -13,12 +13,12 @@
     {% if user in object.drivers.all %}
       <form method="post" action="{% url 'taxi:delete-me' object.pk %}">
         {% csrf_token %}
-        <button type="submit">Delete me from this car</button>
+        <button type="submit" class="btn btn-danger">Delete me from this car</button>
       </form>
     {% else %}
       <form method="post" action="{% url 'taxi:assign-me' object.pk %}">
         {% csrf_token %}
-        <button type="submit">Assign me to this car</button>
+        <button type="submit" class="btn btn-primary">Assign me to this car</button>
       </form>
     {% endif %}
   </h1>
