@@ -1,6 +1,4 @@
 from django.urls import path
-from django.views import View
-
 from .forms import DriverLicenseUpdateForm
 from .views import (
     index,
